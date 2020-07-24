@@ -82,7 +82,7 @@ function addPlayer(name, type) {
     let gameContainer = document.getElementById("players");
     let playerContainer = document.createElement("div");
     playerContainer.classList.add("player");
-    playerContainer.innerHTML = '<img src="images/' + type + '.svg" alt="' + type + '" title="' + type + '" /><h5>' + name + '</h5>';
+    playerContainer.innerHTML = '<img src="images/' + type + '.svg" alt="' + type + '" title="' + type + '" /><h5>' + name + '</h5><span class="skull"></span>';
     gameContainer.appendChild(playerContainer);
 
     playerContainer.addEventListener("click", event => {
