@@ -38,7 +38,16 @@ ul.roles li {
     padding: 20px;
     cursor: pointer;
     text-align: center;
+    transition: ease-out all .25s;
 }
 .player.dead {
-    opacity: 0.5;
+    opacity: 0.3;
+}
+
+#end {
+    display: block;
+}
+
+.footer {
+    display: block;
 }
