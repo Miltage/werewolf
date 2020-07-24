@@ -3,6 +3,7 @@ let villagers = [];
 let werewolfs = [];
 let seers = [];
 let doctors = [];
+let hunters = [];
 
 function generate() {
     let namesInput = document.getElementById("player-names").value;
@@ -12,6 +13,7 @@ function generate() {
     const numWerewolfs = document.getElementById("werewolfCount").value;
     const numDoctors = document.getElementById("doctorCount").value;
     const numSeers = document.getElementById("seerCount").value;
+    const numHunters = document.getElementById("hunterCount").value;
 
     for (var i = 0; i < numWerewolfs; i++)
     {
@@ -33,6 +35,13 @@ function generate() {
         let selection = villagers.splice(index, 1)[0];
         seers.push(selection);
     }
+
+    for (var i = 0; i < numHunters; i++)
+    {
+        let index = Math.floor(Math.random() * villagers.length);
+        let selection = villagers.splice(index, 1)[0];
+        hunters.push(selection);
+    }
     
     names.forEach(name => {
         var type = 'villager';
@@ -42,6 +51,8 @@ function generate() {
             type = 'seer';
         else if (doctors.includes(name))
             type = 'doctor';
+        else if (hunters.includes(name))
+            type = 'hunter';
         
         addPlayer(name, type);
     });
@@ -54,7 +65,7 @@ function addPlayer(name, type) {
     let gameContainer = document.getElementById("players");
     let playerContainer = document.createElement("div");
     playerContainer.classList.add("player");
-    playerContainer.innerHTML = '<img src="images/' + type + '.svg" /><h5>' + name + '</h5>';
+    playerContainer.innerHTML = '<img src="images/' + type + '.svg" alt="' + type + '" title="' + type + '" /><h5>' + name + '</h5>';
     gameContainer.appendChild(playerContainer);
 
     playerContainer.addEventListener("click", event => {
@@ -70,6 +81,7 @@ function endGame() {
     seers = [];
     doctors = [];
     villagers = [];
+    hunters = [];
 
     document.getElementById("players").innerHTML = "";
     document.getElementById("setup").style.display = "grid";
