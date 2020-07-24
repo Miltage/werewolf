@@ -7,6 +7,6 @@ Quickly threw this together so I could host a game online, will update with prop
 
 ## License
 
-All parts of Barebones are free to use and abuse under the MIT license.
+All parts of this generator are free to use and abuse under the MIT License.
 
 
