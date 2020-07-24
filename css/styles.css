@@ -1,3 +1,7 @@
+body {
+    padding: 20px;
+}
+
 .header {
     display: block;
 }
@@ -69,4 +73,12 @@ ul.roles li {
 
 .footer {
     display: block;
+}
+
+.credits {
+    max-width: 500px;
+    margin: auto;
+    margin-top: 200px;
+    font-size: 12px;
+    text-align: center;
 }
