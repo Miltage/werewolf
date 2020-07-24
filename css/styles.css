@@ -30,18 +30,36 @@ ul.roles li {
     line-height: 40px;
 }
 
+#game {
+    user-select: none;
+    display: none;
+}
+
 .player img {
     width: 100%;
     margin-bottom: 10px;
+    transition: ease-out all .25s;
 }
 .player {
+    position: relative;
     padding: 20px;
     cursor: pointer;
     text-align: center;
-    transition: ease-out all .25s;
 }
-.player.dead {
-    opacity: 0.3;
+.player.dead img {
+    opacity: 0.25;
+}
+.player.dead::after {
+    content: " ";
+    background-image: url(../images/skull.svg);
+    width: 100px;
+    height: 100px;
+    margin-top: -95%;
+    margin-left: 19%;
+    opacity: 1;
+    z-index: 10;
+    display: block;
+    position: absolute;
 }
 
 #end {
