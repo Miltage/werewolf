@@ -28,6 +28,7 @@ ul.roles li {
     justify-content: space-between;
     height: 40px;
     line-height: 40px;
+    cursor: default;
 }
 
 #game {
