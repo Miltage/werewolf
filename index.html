@@ -1,53 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Your page title here :)</title>
+  <title>Werewolf Game Generator</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="werewolf.js"></script>
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/barebones.css">
   <link rel="stylesheet" href="css/styles.css">
 
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon-16.png">
 
 </head>
 <body>
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<div class="grid-container header">
 		<h4>Werewolf Generator</h4>
 		<p>Explanation paragraph goes here</p>
 	</div>
-	<div class="grid-container halves">
+	<div id="setup" class="grid-container halves">
 		<div>
 			<p>Player names, one per line.</p>
 			<textarea id="player-names"></textarea>
 		</div>
 		<div>
-			<button class="button-primary">Generate</button>
+			<p>Select roles.</p>
+			<ul class="roles">
+				<li>Werewolf <input id="werewolf" type="number" value="1" min="1" /></li>
+				<li>Seer <input id="seer" type="number" value="0" /></li>
+				<li>Doctor <input id="doctor" type="number" value="0" /></li>
+			</ul>
+			<button id="start" class="button-primary">Generate</button>
+			<span class="error">You did something wrong!</span>
 		</div>
 	</div>
-  </div>
-
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<div id="game" class="grid-container quarters">
+		<div class="player"><img src="images/werewolf.svg" /><h5>Player Name</h5></div>
+		<div class="player dead"><img src="images/seer.svg" /><h5>Player Name</h5></div>
+		<div class="player"><img src="images/doctor.svg" /><h5>Player Name</h5></div>
+		<div class="player"><img src="images/villager.svg" /><h5>Player Name</h5></div>
+	</div>
+	<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+	<div>Icons made by <a href="https://www.flaticon.com/authors/skyclick" title="Skyclick">Skyclick</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 </body>
 </html>

@@ -266,12 +266,7 @@ input[type="button"].button-primary {
 button.button-primary:hover,
 input[type="submit"].button-primary:hover,
 input[type="reset"].button-primary:hover,
-input[type="button"].button-primary:hover,
-.button.button-primary:focus,
-button.button-primary:focus,
-input[type="submit"].button-primary:focus,
-input[type="reset"].button-primary:focus,
-input[type="button"].button-primary:focus {
+input[type="button"].button-primary:hover {
   color: var(--button-primary-color);
   background-color: var(--accent-color-hover);
   border-color: var(--accent-color-hover); }

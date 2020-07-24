@@ -7,3 +7,38 @@
     height: 400px;
     font-size: 24px;
 }
+
+.error {
+    display: block;
+    margin-top: 20px;
+    color: red;
+}
+
+input[type="number"] {
+    width: 60px;
+}
+
+ul.roles {
+    list-style: none;
+    margin: 30px 100px;
+}
+
+ul.roles li {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    line-height: 40px;
+}
+
+.player img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.player {
+    padding: 20px;
+    cursor: pointer;
+    text-align: center;
+}
+.player.dead {
+    opacity: 0.5;
+}
