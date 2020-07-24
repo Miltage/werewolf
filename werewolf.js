@@ -9,11 +9,24 @@ function generate() {
     let namesInput = document.getElementById("player-names").value;
     names = namesInput.split("\n");
     villagers = [...names];
+
+    console.log(villagers.length);
+    if (namesInput.length == 0)
+    {
+        throwError("No names on list!");
+        return;
+    }
     
     const numWerewolfs = document.getElementById("werewolfCount").value;
     const numDoctors = document.getElementById("doctorCount").value;
     const numSeers = document.getElementById("seerCount").value;
     const numHunters = document.getElementById("hunterCount").value;
+
+    if (numWerewolfs < 1)
+    {
+        throwError("You need at least 1 werewolf!");
+        return;
+    }
 
     for (var i = 0; i < numWerewolfs; i++)
     {
@@ -59,6 +72,10 @@ function generate() {
 
     document.getElementById("setup").style.display = "none";
     document.getElementById("game").style.display = "block";
+}
+
+function throwError(error) {
+    document.getElementById("error").innerText = error;
 }
 
 function addPlayer(name, type) {
